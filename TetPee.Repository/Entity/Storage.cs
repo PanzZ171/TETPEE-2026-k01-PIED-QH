@@ -4,10 +4,10 @@ namespace TetPee.Repository.Entity;
 
 public class Storage: BaseEntity<Guid>, IAuditableEntity
 {
-    public Decimal Price { get; set; }
-    public required string Type { get; set; }//exxport, import
+    public decimal Price { get; set; }
+    public required string Type { get; set; } //Export, Import
     
-    public ICollection<Storage> Storages { get; set; } = new List<Storage>();
+    public ICollection<ProductStorage> ProductStorages { get; set; } = new List<ProductStorage>();
     
     public DateTimeOffset CreatedAt { get; set; }
     public DateTimeOffset? UpdatedAt { get; set; }
